@@ -1,5 +1,5 @@
 {
-  "name": "@asemushenko/gitbook-plugin-termtabs",
+  "name": "gitbook-plugin-termtabs",
   "version": "1.0.0",
   "description": "Codetabs with terminal highlighting for Gitbook",
   "main": "index.js",
@@ -17,8 +17,5 @@
   ],
   "engines": {
     "gitbook": ">=3.0.0-pre.8"
-  },
-  "publishConfig": {
-    "registry":"https://npm.pkg.github.com/"
   }
 }
