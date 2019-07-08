@@ -21,9 +21,8 @@ function createTab(block, i, isActive) {
 function createTabBody(block, i, isActive) {
     this.renderBlock('markdown', block.body)
     .then(function (data){
-    return '<div class="tab' + (isActive? ' active' : '') + '" data-termtab="' + i + '"><pre><code>'
-        + data +
-    '</code></pre></div>'
+    return '<div class="tab' + (isActive? ' active' : '') + '" data-termtab="' + i + '">'
+        + data + '</div>'
     });
 }
 
