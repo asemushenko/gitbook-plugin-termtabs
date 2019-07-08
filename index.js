@@ -19,9 +19,12 @@ function createTab(block, i, isActive) {
     @return {String}
 */
 function createTabBody(block, i, isActive) {
+    this.renderBlock('markdown', block.body, open)
+    .then(function (data){
     return '<div class="tab' + (isActive? ' active' : '') + '" data-termtab="' + i + '"><pre><code>'
-        + block.body +
-    '</code></pre></div>';
+        + data +
+    '</code></pre></div>'
+    });
 }
 
 module.exports = {
