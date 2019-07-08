@@ -19,7 +19,7 @@ function createTab(block, i, isActive) {
     @return {String}
 */
 function createTabBody(block, i, isActive) {
-    return '<div class="tab' + (isActive? ' active' : '') + '" data-codetab="' + i + '"><pre><code class="lang-' + (block.kwargs.type || block.kwargs.name) + '">'
+    return '<div class="tab' + (isActive? ' active' : '') + '" data-codetab="' + i + '"><pre><code>'
         + block.body +
     '</code></pre></div>';
 }
