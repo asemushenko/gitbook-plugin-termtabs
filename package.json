@@ -17,5 +17,8 @@
   ],
   "engines": {
     "gitbook": ">=3.0.0-pre.8"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/"
   }
 }
