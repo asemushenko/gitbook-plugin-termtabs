@@ -1,9 +1,9 @@
 require([
     'jquery'
 ], function($) {
-    $(document).on('click.plugin.codetabs', '.codetabs .codetabs-header .tab', function(e) {
+    $(document).on('click.plugin.termtabs', '.termtabs .termtabs-header .tab', function(e) {
         var $btn = $(e.target);
-        var $tabs = $btn.parents('.codetabs');
+        var $tabs = $btn.parents('.termtabs');
         var tabId = $btn.data('codetab');
 
         $tabs.find('.tab').removeClass('active');

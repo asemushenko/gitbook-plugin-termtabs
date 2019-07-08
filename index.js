@@ -28,15 +28,15 @@ module.exports = {
     book: {
         assets: './assets',
         css: [
-            'codetabs.css'
+            'termtabs.css'
         ],
         js: [
-            'codetabs.js'
+            'termtabs.js'
         ]
     },
 
     blocks: {
-        codetabs: {
+        termtabs: {
             blocks: ['tab'],
             process: function(parentBlock) {
                 var blocks = [parentBlock].concat(parentBlock.blocks);
@@ -55,9 +55,9 @@ module.exports = {
                 });
 
 
-                return '<div class="codetabs">' +
-                    '<div class="codetabs-header">' + tabsHeader + '</div>' +
-                    '<div class="codetabs-body">' + tabsContent + '</div>' +
+                return '<div class="termtabs">' +
+                    '<div class="termtabs-header">' + tabsHeader + '</div>' +
+                    '<div class="termtabs-body">' + tabsContent + '</div>' +
                 '</div>';
             }
         }

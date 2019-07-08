@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/asemushenko/gitbook-plugin-termtabs"
+    "url": "https://github.com/asemushenko/gitbook-plugin-termtabs.git"
   },
   "keywords": [
     "gitbook",
