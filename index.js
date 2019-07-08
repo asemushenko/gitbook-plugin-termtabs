@@ -8,7 +8,7 @@
     @return {String}
 */
 function createTab(block, i, isActive) {
-    return '<div class="tab' + (isActive? ' active' : '') + '" data-codetab="' + i + '">' + block.kwargs.name + '</div>';
+    return '<div class="tab' + (isActive? ' active' : '') + '" data-termtab="' + i + '">' + block.kwargs.name + '</div>';
 }
 
 /*
@@ -19,7 +19,7 @@ function createTab(block, i, isActive) {
     @return {String}
 */
 function createTabBody(block, i, isActive) {
-    return '<div class="tab' + (isActive? ' active' : '') + '" data-codetab="' + i + '"><pre><code>'
+    return '<div class="tab' + (isActive? ' active' : '') + '" data-termtab="' + i + '"><pre><code>'
         + block.body +
     '</code></pre></div>';
 }
@@ -47,7 +47,7 @@ module.exports = {
                     var isActive = (i == 0);
 
                     if (!block.kwargs.name) {
-                        throw new Error('Code tab requires a "name" property');
+                        throw new Error('The tab requires a "name" property');
                     }
 
                     tabsHeader += createTab(block, i, isActive);
