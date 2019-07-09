@@ -1,5 +1,3 @@
-//var escape = require('escape-html');
-
 /*
     Generate HTML for the tab in the header
 
@@ -10,6 +8,18 @@
 function createTab(block, i, isActive) {
     return '<div class="tab' + (isActive? ' active' : '') + '" data-termtab="' + i + '">' + block.kwargs.name + '</div>';
 }
+
+(function () {
+    var old = console.log;
+    var logger = document.getElementById('log');
+    console.log = function (message) {
+        if (typeof message == 'object') {
+            logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(message) : message) + '<br />';
+        } else {
+            logger.innerHTML += message + '<br />';
+        }
+    }
+})();
 
 /*
     Generate HTML for the tab's content
@@ -28,7 +38,7 @@ function createTabBody(block, i, isActive) {
 }
 
 module.exports = {
-    book: {
+    this: {
         assets: './assets',
         css: [
             'termtabs.css'
