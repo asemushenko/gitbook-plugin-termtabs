@@ -1,6 +1,6 @@
 {
   "name": "gitbook-plugin-termtabs",
-  "version": "1.0.9",
+  "version": "1.0.12",
   "description": "Codetabs with terminal highlighting for Gitbook",
   "main": "index.js",
   "scripts": {
@@ -16,6 +16,47 @@
     "term"
   ],
   "engines": {
-    "gitbook": ">=3.0.0-pre.8"
+    "gitbook": ">3.0.0"
+  },
+  "dependencies": {
+    "highlight.js": "9.8.0",
+    "xregexp": "3.2.0"
+  },
+  "gitbook": {
+    "properties": {
+      "copyButtons": {
+        "default": true,
+        "title": "Adds buttons to copy the commands",
+        "type": "boolean"
+      },
+      "fade": {
+        "default": true,
+        "title": "If true, the text will fade to highlight the command",
+        "type": "boolean"
+      },
+      "style": {
+        "default": "default",
+        "enum": [
+          "black",
+          "classic",
+          "flat",
+          "ubuntu",
+          "white",
+          "default"
+        ],
+        "title": "Style for the term (defaults to 'default')",
+        "type": "string"
+      },
+      "prompt": {
+        "default": "(?<prompt>[^\\$^#^:]*)(?<pathsep>:?)(?<path>[^\\$^#]*?)(?<delimiter>[\\$#] )(?<command>.*)$",
+        "title": "Prompt to find and replace, must contain group named command",
+        "type": "string"
+      },
+      "lineStyles":{
+        "default": true,
+        "title": "Process beginning of line messages (warn, error)",
+        "type":"boolean"
+      }
+    }
   }
 }
