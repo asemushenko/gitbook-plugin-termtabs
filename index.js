@@ -9,18 +9,6 @@ function createTab(block, i, isActive) {
     return '<div class="tab' + (isActive? ' active' : '') + '" data-termtab="' + i + '">' + block.kwargs.name + '</div>';
 }
 
-(function () {
-    var old = console.log;
-    var logger = document.getElementById('log');
-    console.log = function (message) {
-        if (typeof message == 'object') {
-            logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(message) : message) + '<br />';
-        } else {
-            logger.innerHTML += message + '<br />';
-        }
-    }
-})();
-
 /*
     Generate HTML for the tab's content
 
@@ -29,9 +17,8 @@ function createTab(block, i, isActive) {
     @return {String}
 */
 function createTabBody(block, i, isActive) {
-    return this.renderBlock('markdown', block.body)
+    return this.renderInline('markdown', block.body)
     .then(function (data){
-    console.log(data);
     return '<div class="tab' + (isActive? ' active' : '') + '" data-termtab="' + i + '">'
         + data + '</div>'
     });
