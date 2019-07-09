@@ -81,10 +81,8 @@ function processCode(thebody, isweb) {
     @return {String}
 */
 function createTabBody(block, i, isActive) {
-    var isweb = this.output.name == 'website';
-
     return '<div class="tab' + (isActive? ' active' : '') + '" data-termtab="' + i + '">'
-        + processCode(block.body, isweb).body + '</div>';
+        + processCode(block.body, false).body + '</div>';
 }
 
 module.exports = {
