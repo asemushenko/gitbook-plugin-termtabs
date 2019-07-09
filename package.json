@@ -1,6 +1,6 @@
 {
   "name": "gitbook-plugin-termtabs",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Codetabs with terminal highlighting for Gitbook",
   "main": "index.js",
   "scripts": {
