@@ -87,7 +87,7 @@ module.exports = {
     this: {
         assets: './assets',
         css: [
-            'termtabs.css',
+            'termtabs.css'
         ],
         js: [
             'termtabs.js',
@@ -95,7 +95,12 @@ module.exports = {
             'initclip.js'
         ]
     },
-
+    ebook: {
+        assets: './assets',
+        css: [
+            'plugin.css'
+        ]
+    },
     blocks: {
         termtabs: {
             blocks: ['tab'],
