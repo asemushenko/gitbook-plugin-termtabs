@@ -84,7 +84,7 @@ function createTabBody(block, i, isActive) {
 }
 
 module.exports = {
-    this: {
+    book: {
         assets: './assets',
         css: [
             'termtabs.css'
