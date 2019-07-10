@@ -17,7 +17,7 @@ function processLine(line) {
     var str = "";
     var commands = "";
 
-    re = XRegExp("(?<prompt>[^\\$^#^:]*)(?<pathsep>:?)(?<path>[^\\$^#]*?)(?<delimiter>[\\$#] )(?<command>.*)$");
+    re = XRegExp("(?<prompt>[^\\$^#^:]*)(?<pathsep>:?)(?<path>[^\\$^#]*?)(?<delimiter>[\\$# ] )(?<command>.*)$");
 
     if(re.test(line)) {
         var parts = XRegExp.exec(line, re);
